@@ -7,6 +7,7 @@ import android.util.Log
 import androidx.camera.core.ExperimentalGetImage
 import androidx.camera.core.ImageProxy
 import com.fadlurahmanfdev.feature_barcode.core.callback.BarcodeCallback
+import com.google.android.gms.tasks.Task
 import com.google.mlkit.vision.barcode.BarcodeScanner
 import com.google.mlkit.vision.barcode.BarcodeScannerOptions
 import com.google.mlkit.vision.barcode.BarcodeScanning
@@ -63,6 +64,10 @@ class FeatureBarcode {
         }
         currentImageProxy = imageProxy
         handler.postDelayed(runnableProcessImage, 500)
+    }
+
+    fun processImage(inputImage: InputImage): Task<MutableList<Barcode>> {
+        return barcodeScanner.process(inputImage)
     }
 
 }
