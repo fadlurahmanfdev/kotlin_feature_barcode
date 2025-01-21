@@ -54,7 +54,7 @@ mavenPublishing {
     publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
     signAllPublications()
 
-    coordinates("com.fadlurahmanfdev", "kotlin_feature_barcode", "0.0.1")
+    coordinates("com.fadlurahmanfdev", "kotlin_feature_barcode", "0.1.0")
 
     pom {
         name.set("Kotlin Library Feature Barcode")
